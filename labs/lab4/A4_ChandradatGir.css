@@ -1,0 +1,57 @@
+body{
+			background-color:#d680d6;
+
+			padding:20px;
+			width:auto;
+		}
+		.container{
+			max-width: 650px;
+			width: auto;
+			height:auto;
+			margin: 0 auto;
+			border:20px #d44efa solid;
+			border-radius: 10px;
+			padding:20px;
+
+		}
+		header{
+			max-width:550px;
+			width: auto;
+			height:auto;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+		h1{
+				font-size: 3vw;
+		}
+		h3{
+			font-size: 2vw;
+		}
+		fieldset{
+			color:black;
+			border:2px #af00fa solid;
+			border-radius:5px;
+		}
+		input{
+			background-color:#e37fe9;
+			border:2px #d86fca solid;
+			color:blue;
+		}
+		select{
+			width:38px;
+			overflow:hidden;
+		}
+		#btn_1{
+			background-color:yellow;
+			border:10px #c5e970 solid;
+			border-radius:5px;
+		}
+		p{
+			font-family: Georgia, Times, Times New Roman, serif;
+			background-color:#e37fe9;
+			width:auto;
+		}
+		b{
+			color:red;
+		}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Postcard Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:300,400|Oswald:700">
+	<link rel="stylesheet" href="css/main2.css">
+	<link rel="stylesheet" href="css/main1.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style1.css">
+
+</head>
+<body>
+
+<header>
+<div class="content-wrapper">
+		<img src="image/coa.jpg" class="logo" alt="Coat of Arms" height="42">
+		<nav>
+			<ul>
+				<li><a href="snippets/about-icc.html" target="_blank" >ICC</a></li>
+				<li><a href="https://iwokramariverlodge.com/lodge/" target="_blank" >Press</a></li>
+				<li><a href="snippets/icc-app-form.html" target="_blank">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="hero">
+	<h1>ICC for Rainforest Conservation and Development</h1>
+	<p>Eco-Tourism, Sustainable Forestry & Climate Change.</p>
+</div>
+
+<main role="main">
+	<div class="content-wrapper">
+		<p id="press-quote">ICC can benefit some of the world’s most incredible places and the communities who call them home — Terra Incognita</p>
+		<p>ICC is an international not-for-profit organization. It is governed by an International Board of Trustees. It is managed by staff at Georgetown and the Iwokrama River Lodge and Research Center at Kurupukarie. ICC's patron is HRH The Prince of Wales.<br>
+		It was established in 1996 under a mandate of the Guyana Government and the Commonwealth Secretariat to manage the Iwokrama forest, a pristine and unique reserve of 371,000 hectares of rainforest. Its objective is for a lasting ecological economic and social benefits to the people of Guyana and the world at in general.<br>
+		If you’re interested in starting a ICC chapter in your local community, please
+		<a href="icc-app-form.html">contact&nbsp;us</a></p>
+
+		<h2>Our Mission</h2>
+		<figure>
+			<img src="image/NC-Prince-Harry-Guyana-MEM-161219.jpg" alt="Prince Harry visiting the Kaieteur Falls">
+			<figcaption>Prince Harry at the Kaieteur Falls</figcaption>
+		</figure>
+		<p>
+			The Iwokrama Conservation Project was founded to promote the conservation and the sustainable and equitable use of the tropical rainforests.<br>
+			The Iwokrama rainforest is located in the geographical heart of Guyana: it comprises 371,000 hectares of forest, or 1,6% of Guyana's landmass and 2% of Guyana forests.<br>
+			Fundamental to the work of the Iwokrama Center is the geographical zoning the Iwokrama Forest into two spatially equal zones: a Sustainable Use Area (SUA) and a Wilderness Preserve (WP). The SUA is available for multiple resource use to yield benefits to present generations while maintaining the potential to meet the needs of future generations. The SUA is managed by the Center	 and the local communities and in particular Fair View Village. The WP serves as a reference area for studying the impacts of human activity through comparison with uses in the SUA, and to maintain a pool of genetic resources and culturally important sites in an intact state.
+			</p>
+	</div>
+</main>
+
+<div class="outer-wrapper">
+	<header class="clearfix">
+		<h1>Iwokarma Faunas</h1>
+		<select id="animal-list">
+			<option value="jg">Choose Animal</option>
+			<option value="ar">Arapaima</option>
+
+			<option value="go">Giant Otter</option>
+
+			<option value="he">Harpy Eagle</option>
+			<option value="jg">Jaguar</option>
+
+			<option value="mc">Macaw</option>
+			<option value="ml">Mountain Lion</option>
+
+			<option value="pr">Parrot</option>
+
+			<option value="sm">Sqirrel Monkey</option>
+		</select>
+	</header>
+
+	<div class="main clearfix">
+		<div class="img-holder">
+			<div>
+				<img id="info-pic" src="image/jg.jpg" alt="Jaguar" width="260" height="260">
+				<p id="info-name">Jaguar</p>
+			</div>
+		</div>
+		<div id="myDiv1" class="info-holder" >
+			<p><strong>Scientific: </strong><span id="info-scname">Panthera onca</span></p>
+			<p><strong>Type: </strong><span id="info-type">Mammals</span></p>
+			<p><strong>Diet: </strong><span id="info-diet">Carnivores</span></p>
+			<p><strong>Life Span: </strong><span id="info-lspan">15 to 20 years</span></p>
+			<p><strong>Size: </strong><span id="info-size">5 - 6 ft</span></p>
+			<p><strong>Weight: </strong><span id="info-weight">120 - 250 lb</span></p>
+		</div>
+	</div>
+</div>
+<div class="outer-wrapper">
+	<div class="content-wrapper">
+		<header>
+			<h1>Postcard Generator</h1>
+			<p class="subtitle">Scenic Beauties From Guyana's Rainforest</p>
+		</header>
+		<main role="main">
+			<div class="first step">
+				<h2>1. Choose a Scene</h2>
+				<select name="scenes" id="scenes">
+					<option selected disabled value="empty-state">Republic of Guyana</option>
+					<option value="ar">Aruwai Falls</option>
+					<option value="coa">Coat of Arms</option>
+					<option value="iwl">Iwokarma Lodge</option>
+					<option value="he">Amazon Queen</option>
+					<option value="mac">Exotic Macaw</option>
+					<option value="gw">God's Water Fall</option>
+					<option value="man">Canopy In The Sky</option>
+					<option value="gp">God's Place</option>
+					<option value="gw">God's Water Fall</option>
+					<option value="or">Orinduik Falls</option>
+					<option value="kan">Kanuku Falls</option>
+					<option value="kai">Kaieteur Falls</option>
+					<option value="jg">Amazon King</option>
+					<option value="kam">Kamarang Falls</option>
+					<option value="kg">King George's IV Falls</option>
+					<option value="guy">Guyana</option>
+					<option value="sgc">St. George's Cathedral</option>
+					<option value="tt">Toucan</option>
+					<option value="oc">Ocelot</option>
+
+				</select>
+			</div>
+			<div class="second step">
+				<h2>2. Enjoy Your Postcard!</h2>
+				<div id="postcard">
+					<p id="greeting">To Generate a Postcard</p>
+					<p id="scenes-heading">Choose a scene</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<script src="js/myList.js"></script>
+<script>
+	document.getElementById('animal-list').onchange = function() {
+		var selected = this.value;
+		document.getElementById('info-pic').src = 'image/'+selected+'.jpg';
+		document.getElementById('info-name').textContent = animalData[this.value].name;
+		document.getElementById('info-scname').textContent = animalData[this.value].scName;
+		document.getElementById('info-type').textContent = animalData[this.value].type;
+		document.getElementById('info-diet').textContent = animalData[this.value].diet;
+		document.getElementById('info-lspan').textContent = animalData[this.value].age;
+		document.getElementById('info-size').textContent = animalData[this.value].size;
+		document.getElementById('info-weight').textContent = animalData[this.value].weight;
+	};
+</script>
+<footer>
+	<p>Copyright © ICC to Promote Rainforest's Conservation and Development</p>
+</footer>
+
+<script>
+	var reviewsArray = [
+		'ICC can benefit some of the world’s most incredible places and the communities who call them home — Terra Incognita',
+		'Guyana Offers a Model to Save Rain Forest — The New York Times',
+		'The Guiana Shield is one of only four intact rainforests left on the planet —  Independent UK',
+		'By visiting this destination, travelers are rewarded with one of the best terrestrial wildlife experiences in the world — Oceanic Society  Review',
+		'Guyana is one of the world most important countries on biodiversity conservation — Global Wildlife Conservation',
+		'Guyana is a biodiversity hotspot harboring countless species, including many found nowhere else — Oceanic Society Review',
+		'ICC-Canopy Walkway offers a totally unique experience — Tourist Review'
+	];
+	var randomNumber = Math.floor(Math.random()*reviewsArray.length);
+	document.getElementById('press-quote').textContent = '“' + reviewsArray[randomNumber].split(' — ')[0] + '” — ' + reviewsArray[randomNumber].split(' — ')[1];
+	//console.log( 	reviewsArray[randomNumber].split(' — ')[0] );
+</script>
+<div class="container">
+	<h1>Community and Tourism Services, Inc. CATS Volunteer Application</h1>
+	<p>Thank you so much for your interest in volunteering with CATS! Please fill out the brief form below to give us a little background information about yourself. One of our volunteer co-ordinators will contact you via email or phone with seven days to discuss the opportunity with you further.</p>
+
+	<div class="form-container">
+		<form id="vol-form">
+			<div class="form-section">
+				<label for="first-name">First Name:</label>
+				<input id="first-name" name="first-name" type="text">
+			</div>
+			<div class="form-section">
+				<label for="last-name">Last Name:</label>
+				<input id="last-name" name="last-name" type="text">
+			</div>
+			<div class="form-section">
+				<label for="email">Email:</label>
+				<input id="email" name="email" type="email">
+			</div>
+			<div class="form-section">
+				<label for="phone">Phone:</label>
+				<input id="phone" name="phone" type="tel">
+			</div>
+			<div class="form-section">
+				<label for="prev-vol">Past Experience:</label>
+				<input id="prev-vol" name="prev-vol" type="text">
+			</div>
+			<div class="form-section">
+				<label for="from-year" class="from-label">From:</label>
+				<select id="from-year" name="from-year">
+					<option value="blank"></option>
+					<option value="1999">Before 2000</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+				</select>
+				<br>
+				<label for="to-year" class="to-label">To:</label>
+				<select id="to-year" name="to-year">
+				<option value="blank"></option>
+					<option value="1999">Before 2000</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+				</select>
+			</div>
+			<input id="submit" type="submit" value="Submit">
+		</form>
+		<p id="mess-1"></p>
+	</div>
+
+</div>
+<footer>
+	<p>Made in NY <br>Copyright © Postcard Generator</p>
+</footer>
+
+<script>
+	var scenes = document.getElementById('scenes');
+
+	scenes.onchange = function() {
+
+		// console.log('state index: ' + states.selectedIndex);
+		// console.log('state name: ' + states.options[states.selectedIndex].text);
+		// console.log('img/' + states.value + '@2x.jpg');
+		document.getElementById('postcard').style.backgroundImage = 'url(image1/' + scenes.value + '.jpg)';
+		document.getElementById('greeting').innerHTML = 'Greetings from';
+		document.getElementById('scenes-heading').innerHTML = scenes.options[scenes.selectedIndex].text;
+	}
+</script>
+<script>
+	submit.onclick= function(){
+		var message;
+		var fname;
+		var lname;
+		var useremail;
+
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		var phoneno =  /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+		fname=document.forms["vol-form"]["first-name"].value;
+		lname=document.forms["vol-form"]["last-name"].value;
+		useremail=document.forms["vol-form"]["email"].value;
+		var userphone = document.forms["vol-form"]["phone"].value;
+		var fdate = document.forms["vol-form"]["from-year"].value;
+		var tdate = document.forms["vol-form"]["to-year"].value;
+		document.getElementById("mess-1").innerHTML= "Hello "+fname + " "+lname+ ", it is always a pleasure hearing from our viewers.<br> We will contact you on "+useremail;
+
+		if(fname=="" || lname==""){
+			alert("Please your complete name!");
+			return false;
+		}
+		else if(!useremail.match(mailformat)){
+			alert("Please enter a valid email");
+			return false;
+		}
+		else if(!userphone.match(phoneno)){
+			alert("Please enter your correct phone number");
+			return false;
+		}
+		else if(fdate>tdate){
+			alert("Invalid dates - 'From' cannot be greater than 'To!")
+			return false;
+		}
+		else{
+			return false;
+		}
+
+	}
+
+</script>
+<footer>
+	<p>Made in NY <br>Copyright © Fantcy Works</p>
+</footer>
+</body>
+</html>

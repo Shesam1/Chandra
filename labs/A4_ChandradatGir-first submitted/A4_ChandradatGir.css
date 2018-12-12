@@ -1,0 +1,36 @@
+body{
+			background-color:#d680d6;
+			border:20px #d44efa solid;
+			border-radius: 10px;
+			padding:20px;
+			width:auto;	
+		}
+		h1{
+			
+		}
+		fieldset{
+			color:black;
+			border:2px #af00fa solid;
+			border-radius:5px;
+		}
+		input{
+			background-color:#e37fe9;
+			border:2px #d86fca solid;
+			color:blue;
+		}
+		select{
+			width:38px;
+			overflow:hidden;
+		}
+		#btn_1{
+			background-color:yellow;
+			border:10px #c5e970 solid;
+			border-radius:5px;
+		}
+		p{
+			font-family:"Comic Sans MS";
+			background-color:#e37fe9;
+			width:auto;
+		}
+		
+	

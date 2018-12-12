@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Personal Calculator</title>
+
+		<style>
+			body{
+				max-width:95%;
+				width:100%;
+				background-color:#b3ffec;
+				color:green;
+			}
+
+			.container{
+				max-width:650px;
+				width:auto;
+				height:auto;
+				margin: 0 auto;
+				background-color:#b3ffec;
+				border:3px solid green;
+				border-radius:5px;
+			}
+
+			form{
+				max-width: 550px;
+				width:100%;
+				margin:0 auto;
+			}
+			.form-row{
+				width:100%;
+				padding:10px;
+				margin: 0 auto;
+				display: flex;
+			}
+			.form-row input{
+				color: #ff00ff;
+				background-color:linen;
+				flex: 1;
+				height:1rem;
+			}
+			h1, h3{
+				margin: 0 auto;
+				text-align:center;
+			}
+			.resp{
+				max-width:550px;
+				width:100%;
+				margin: 0 auto;
+			}
+			button{
+				background:#008080;
+				color: red;
+				border: 3px solid green;
+			}
+			button:hover{
+				background:#708090;
+				color: #fff;
+				border: 3px solid yellow;
+			}
+		</style>
+
+	</head>
+	<body id="canv">
+
+		<div class="container">
+			<h1 id="firstHeader">Let's Calculate...!</h1>
+			<h3 style="color:purple;">Your Age Calculator!</h3>
+
+
+			<div class="form-row">
+			<form id="ageForm">
+				<fieldset>
+				<legend>Age Form</legend>
+
+				<div class="form-row">
+					<label for="name"> Enter Your Name:</label>
+					<input type ="text" name="yourName" id="name" value="">
+				</div>
+
+				<div class="form-row">
+					<label for="dob1">Enter Your Year Of Birth:</label>
+					<input type ="year" name="dateOfBirth" id="dob1" value=""
+					max="2018" required pattern="[0-9]{04}" placeholder="YYYY">
+				</div>
+				<div class="form-row">
+					<label for="dob2">Enter Future Year To Check Age:</label>
+					<input type ="year" name="futureBirth" id="dob2" value=""
+					min="2019" required pattern="[0-9]{04}" placeholder="YYYY">
+				</div>
+				</fieldset>
+				<h3 style="color:purple;">Your Snack Calculator!</h3>
+
+				<fieldset>
+					<legend>Snack Form</legend>
+				<div class="form-row">
+					<label for="age1">Enter Your Age:</label>
+					<input type="number" name="age" id="age1" min="10" max="65"required placeholder="10 to 65">
+				</div>
+				<div class="form-row">
+					<label for="age2">Enter Your Projected Age:</label>
+					<input type="number" name="age2" id="age2" min="50" max="120"required placeholder="50 to 120">
+				</div>
+				<div class="form-row">
+					<label for="sAmt">Enter The Number Of Snacks Per Day:</label>
+					<input type="number" name="snacks" id="sAmt" min="1" max="10"required placeholder="1 to 10">
+				</div>
+				<div class="form-row">
+					<label for="sCst"> Enter The Price of the Snack:</label>
+					<input type="number" name="snacks" id="sCst" min="0.25" max="10.00"required placeholder=".01 to 10.00">
+				</div>
+				</fieldset>
+			</form>
+			</div>
+
+			<div class="resp">
+				<p id="demo">Your age will appear here!</p>
+				<p id="demo2">Your snacks costing will appear here!</p>
+
+				<button type="button" onclick=calAge()>Click Me!</button><br>
+			</div>
+		</div>
+		<script>
+			function calAge()
+			{
+				//Age Calculator Variables
+				var yname = document.getElementById("ageForm").elements.namedItem("name").value;
+				var date1 = document.getElementById("ageForm").elements.namedItem("dob1").value;
+				var date2 = document.getElementById("ageForm").elements.namedItem("dob2").value;
+
+				//Snack Costing Variables
+				var yname = document.getElementById("ageForm").elements.namedItem("name").value;
+				var curAge = document.getElementById("ageForm").elements.namedItem("age1").value;
+				var expAge = document.getElementById("ageForm").elements.namedItem("age2").value;
+				var amt = document.getElementById("ageForm").elements.namedItem("sAmt").value;
+				var price = document.getElementById("ageForm").elements.namedItem("sCst").value;
+
+				//Age Calculator Codes
+				//Validating year entered
+				if(date1 > "2018" || date1>date2 ||date2<"2019"){
+					document.getElementById("demo").innerHTML="Invalid entries";
+				}
+				else{
+					//Capturing input into variables
+					var futureAge = date2 - date1;
+					var futureAge2 = (futureAge-1);
+
+					//Changing elements color
+					document.getElementById("canv").style.backgroundColor="lightyellow";
+					document.getElementById("canv").style.color="darkgreen";
+					document.getElementById("firstHeader").style.color="blue";
+					document.getElementById("dob1").style.color="red";
+					document.getElementById("dob2").style.color="red";
+
+					//Display result
+					document.getElementById("demo").innerHTML="Hello "+yname+"! In the year " + date2 +
+					" you will be either " + futureAge2 +" or " + futureAge + " years old!" ;
+				}
+				//Snack Costing Codes
+				//Changing element color
+				document.getElementById("name").style.color="red";
+				document.getElementById("age1").style.color="red";
+				document.getElementById("age2").style.color="red";
+				document.getElementById("sAmt").style.color="red";
+				document.getElementById("sCst").style.color="red";
+
+				//Capturing input into variables
+				var years = expAge-curAge;
+				var cost_per_day = (amt * price).toFixed(2);
+				var days = years * 365 + Math.round((years/4));
+				var totCost = days * cost_per_day;
+				var numOfSnks = days * amt;
+				var currentYear = new Date().getFullYear();
+				var calAge = currentYear - date1;
+
+				//Validating age entered with year of birth
+				if((Math.abs((curAge-calAge)) >1) || (curAge>calAge)){
+				alert("Incorrect Age! Check Year of Birth, or Age entered! Age is " +(calAge-1)+" or "+calAge);
+				}
+
+				//Display result
+				document.getElementById("demo2").innerHTML="At present, you should be either "+(calAge-1) +" or "+calAge+" years Old! <br> You will need "+ numOfSnks.toLocaleString() + " snacks to last you until the ripe old age of "+expAge +" totally costing you " + (totCost).toLocaleString('en-US', {
+					  style: 'currency',
+					  currency: 'USD',
+					})+"!";
+
+			}
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VEHICLE>
+  <CAR>
+	<MODEL>Fiesta</MODEL>
+	<YEAR>2019</YEAR>
+	<PRICE>$14,260</PRICE>
+	<MPG>City/Hwy 27/35</MPG>
+	<PIC>image/cq5dam.jpeg</PIC>
+  </CAR>
+   <CAR>
+	<MODEL>Focus</MODEL>
+	<YEAR>2018</YEAR>
+	<PRICE>$17,950</PRICE>
+	<MPG>City/Hwy 25/34</MPG>
+	<PIC>image/ford_focus_2018_4.jpg</PIC>
+  </CAR>
+   <CAR>
+	<MODEL>Fusion</MODEL>
+	<YEAR>2019</YEAR>
+	<PRICE>$22,840</PRICE>
+	<MPG>City/Hwy 21/31</MPG>
+	<PIC>image/19fordfusion-11-hr.jpg</PIC>
+  </CAR>
+   <CAR>
+	<MODEL>C-Max Hybrid</MODEL>
+	<YEAR>2018</YEAR>
+	<PRICE>$24,130</PRICE>
+	<MPG>City/Hwy/Combo 42/35/40</MPG>
+	<PIC>image/c-max-hybrid.jpg</PIC>
+  </CAR>
+   <CAR>
+	<MODEL>Mustang</MODEL>
+	<YEAR>2019</YEAR>
+	<PRICE>$26,120</PRICE>
+	<MPG>City/Hwy 21/31</MPG>
+	<PIC>image/mustagn.jpg</PIC>
+  </CAR>
+   <CAR>
+	<MODEL>Tarus</MODEL>
+	<YEAR>2019</YEAR>
+	<PRICE>$27,800</PRICE>
+	<MPG>City/Hwy 29/41</MPG>
+	<PIC>image/tarus2019.png</PIC>
+  </CAR>
+ 
+</VEHICLE>

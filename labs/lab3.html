@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--Chandradat Gir
+	Assignment 3
+	Cash Register-->
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Cash Register</title>
+		<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/main1.css">
+	</head>
+	<body>
+			<h1>GoTo Shopping Market!</h1>
+		<div id="container">
+			<fieldset>
+				<legend>GoTo Cash Register!</legend>
+				
+				
+			<form id="row1">
+				Please Enter Your Name: <input type="text" id="yourname" name ="yourname" id="yourname" oninput="updateName()"/>
+				<table>
+						<tr>
+							<th>Description</th>
+							<th>$ Price</th>
+							<th>Quantity</th>
+							<th>Total</th>
+						</tr>
+						<tr>
+							<th><input class="data-1" type="text" name="itemname" value="Banana" disabled></td>
+							<td><input class="data-2" type="text" name="itemprice" value="1.25" disabled></td>
+							<td><input class="data-2" type="number" name="itemquantity" min="0" max="36" required></td></td>
+							<td><p class="p1"><span id="row1itemvalue"></span></p></td> 
+							<td><p class="p1"><button type = "button" id="row1btn" onclick="addItem('row1')">Add</button></p> </td>
+							
+						</tr>
+				
+				</table>
+			
+			</form>
+		
+			<!--Second item-->
+			<form id="row2">
+				<table>
+					<tr >	
+						<th><input class="data-1"  type="text" name="itemname" value="Handkerchief" disabled></td>
+						<td><input class="data-2"  type="text" name="itemprice" value="0.99" disabled></td>
+						<td><input class="data-2"  type="number" name="itemquantity" min="0", max="36"></td></td>
+						<td><p class="p1"><span id="row2itemvalue"></span></p></td> 
+						<td><p class="p1"><button type = "button" id="row2btn" onclick="addItem('row2')">Add</button></p> </td>
+					</tr>
+				</table>
+			</form>
+			
+			<!--Third item-->
+			<form id="row3">
+				<table>
+					<tr >						
+						<th><input class="data-1"  type="text" name="itemname" value="T-Shirt" disabled></td>
+						<td><input class="data-2" type="text" name="itemprice" value="25.01" disabled></td>
+						<td><input class="data-2" type="number" name="itemquantity" min="0", max="36"></td></td>
+						<td><p class="p1"><span id="row3itemvalue"></span></p></td> 
+						<td><p class="p1"><button type = "button" id="row3btn" onclick="addItem('row3')">Add</button></p> </td>					
+					</tr>			
+				</table>
+			</form>
+			
+			<!--Fourth item-->
+			<form id="row4">
+				<table>				
+					<tr >
+						<th><input class="data-1"  type="text" name="itemname" value="Apple" disabled></td>
+						<td><input class="data-2"  type="text" name="itemprice" value="0.60" disabled></td>
+						<td><input class="data-2"  type="number" name="itemquantity" min="0", max="36"></td></td>
+						<td><p class="p1"><span id="row4itemvalue"></span></p></td> 
+						<td><p class="p1"><button type = "button" id="row4btn" onclick="addItem('row4')">Add</button></p> </td>
+					</tr>
+				</table>
+			</form>
+			
+			<!--Fifth item-->
+			<form id="row5">
+			<table>					
+				<tr >		
+					<th><input class="data-1"  type="text" name="itemname" value="Nakgene" disabled></td>
+					<td><input class="data-2"  type="text" name="itemprice" value="10.34" disabled></td>
+					<td><input class="data-2"  type="number" name="itemquantity" min="0", max="36"></td></td>
+					<td><p class="p1"><span id="row5itemvalue"></span></p></td> 
+					<td><p class="p1"><button type = "button" id="row5btn" onclick="addItem('row5')">Add</button></p> </td>					
+				</tr>			
+			</table>
+			</form>
+			
+			<!--Sixth item-->
+			<form id="row6">
+				<table>	
+					<tr >			
+						<th><input class="data-1"  type="text" name="itemname" value="Protein Shake" disabled></td>
+						<td><input class="data-2"  type="text" name="itemprice" value="22.36" disabled></td>
+						<td><input class="data-2"  type="number" name="itemquantity" min="0", max="36"></td></td>
+						<td><p class="p1"><span id="row6itemvalue"></span></p></td> 
+						<td><p class="p1"><button type = "button" id="row6btn" onclick="addItem('row6')">Add</button></p> </td>
+					</tr>			
+				</table>
+			</form>
+			<p class="small">Please click "Add" to place item in shopping cart<br>
+			Also to update an item in shopping cart!</p>
+			<p id="demo">Bill</p>
+			<button type="button" id="button-1" onclick="cartTotal()">Calculate Total</button>
+			</fieldset>
+			</div>
+		<script>
+		
+			var cartForParty = [{  
+				  name:"Banana", price: 1.25, quantity: 0.00, cost: 0.00},{
+				  name: "Handkerchief", price: 0.99, quantity: 0.00, cost: 0.00},
+				  {name: "T-Shirt", price: 25.01, quantity: 0.00, cost: 0.00},
+				  {name: "Apple", price: 0.60, quantity: 0.00, cost: 0.00},
+				  {name: "Nakgene", price: 10.34, quantity: 0.00, cost: 0.00},
+				  {name: "Protein Shake", price: 22.36, quantity: 0.00, cost: 0.00}];
+
+		
+			var itemdata;
+			var customer;
+			var name;
+			//var price;
+			//var qantity;
+			//var cost;
+			var cst =0.00;
+			var qty=0.00;
+	
+			var result=0.00;
+			
+			function updateName(){
+				customer = document.getElementById("row1").elements.namedItem("yourname").value;
+			}
+			
+			function addItem(rowId){
+				itemdata=document.getElementById(rowId);
+				item=itemdata.elements.namedItem("itemname").value;
+				qty=itemdata.elements.namedItem("itemquantity").value;
+				customer = document.getElementById("row1").elements.namedItem("yourname").value;
+				if(Number(qty)< 0){
+					alert("Invalid Input-Pleae check correct!");
+				}
+				var index=-1;
+				for(var x = 0; x<cartForParty.length; x++){
+					var item0 = cartForParty[x].name;
+					if(item0.localeCompare(item)==0){
+						index=x;
+						break;
+					}
+					
+				}
+				if(index!=-1 || !index >= cartForParty.length){
+					if(qty >=0){
+						cartForParty[index].quantity=qty;
+						cartForParty[index].cost=qty * cartForParty[index].price;
+						cst=cartForParty[index].cost;
+					}
+					
+				}
+				
+				document.getElementById(rowId+"itemvalue").innerHTML=cst.toFixed(2);	
+				document.getElementById(rowId+"btn").innerHTML="Update";	
+			}
+			
+			function cartTotal(){
+				result = 0.00;
+				document.getElementById("demo").innerHTML = cashRegister(cartForParty);
+				
+				//itemdata.elements.namedItem()
+				function cashRegister(cart){
+					for(var y=0; y < cart.length; y++){
+						
+						result += cart[y].quantity*cart[y].price;
+						
+					}
+					return "Hello "+customer+"!<br>Your shopping cart total is " + (result).toLocaleString('en-US', {
+					  style: 'currency',
+					  currency: 'USD',
+					}); amount;
+				}
+			}
+			
+			
+			
+		</script>
+	
+		
+	</body>
+</html>

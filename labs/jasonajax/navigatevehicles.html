@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Car Catalog</title>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Tangerine" />
+	<style>
+		body{
+			background-color: linen;
+			color:purple;
+		}
+		header{
+			font-family: Tangerine;
+			text-align: center;
+			max-width:550px;
+			width:auto;
+			
+		}
+		main{
+			max-width:550px;
+			width:auto;
+			height:auto;
+			display:flex;
+		}
+		div{
+			border: 5px solid green;
+			padding: 5px;
+			margin: 0px 5px;
+		}
+		#showFord{
+			width: auto;
+			height:auto;
+			border-color:green;
+		}
+		img{
+			max-width:480px;
+			width:100%;
+			height:auto;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Our Ford Catalog</h1>
+		<h2>XMas Deals - 2018</h2>
+	</header>
+	<main class="flex-container">
+
+
+		<div id='showImage'></div>
+		<div id='showFord'></div>
+	</main>
+
+	<br>
+	<input type="button" onclick="previous()" value="<<">
+	<input type="button" onclick="next()" value=">>">
+
+	<script>
+		var i = 0;
+		var x;
+		var y;
+		displayCar(i);
+
+		function displayCar(i) {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					myFunction(this, i);
+				}
+			};
+			xmlhttp.open("GET", "car-list.xml", true);
+			xmlhttp.send();
+		}
+
+		function myFunction(xml, i) {
+			var xmlDoc = xml.responseXML; 
+			x = xmlDoc.getElementsByTagName("CAR");
+			
+			y = x[i].getElementsByTagName("PIC")[0].childNodes[0].nodeValue ;
+			var pic = document.createElement("IMG");
+			pic.setAttribute("src", y);
+			pic.setAttribute("width", "350");
+			pic.setAttribute("height", "250");
+			pic.setAttribute("alt", "Ford");
+			
+			document.getElementById("showImage").innerHTML="";
+			document.getElementById("showImage").appendChild(pic);
+			
+			document.getElementById("showFord").innerHTML =
+			"Model: " +
+			x[i].getElementsByTagName("MODEL")[0].childNodes[0].nodeValue +
+			"<br>Year: " +
+			x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+			"<br>MPG: " + 
+			x[i].getElementsByTagName("MPG")[0].childNodes[0].nodeValue +
+			"<br>Price: " +
+			x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+			
+		}
+
+		function next() {
+		if (i < x.length-1) {
+		  i++;
+		  displayCar(i);
+		  }
+		}
+
+		function previous() {
+		if (i > 0) {
+		  i--;
+		  displayCar(i);
+		  }
+		}
+	</script>
+
+</body>
+</html>

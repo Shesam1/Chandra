@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Assignment #1 LR></title>
+		<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+			
+		<style>
+			body{
+				font-family: 
+				width:100%;
+				background-color:rgb(244, 110, 66);
+			} 
+			
+			.container{
+				max-width:650px;
+				width:100%;
+				margin: 0 auto;
+				border: 5px solid green;
+				border-radius: 5px;
+			}
+			h1{
+				color:blue;
+				text-align:center;
+				
+			}
+			fieldset{
+				color:green;
+				font-size:1rem;
+				width:auto;
+			}
+			legend{
+				color:purple;
+				font-size:1.2rem;
+			}
+			form{
+				margin: 0 auto;
+			} 
+			
+			
+			.main{
+				max-width:750px;
+				width:100%;
+				height: auto;
+				margin: 0 auto;
+			}
+			
+			.form-row{
+				width:100%;
+				padding:10px;
+				margin: 0 auto;
+				display: flex;
+			}
+			.form-row label{
+				padding:10px;
+				
+			}
+			
+			.form-row input{
+				color:#800080;
+				background-color:linen;
+				padding:5px;
+				height:1rem;
+				flex: 1;
+			}
+			.bottom{
+				margin:0 auto;
+			}
+			
+		</style>
+	</head>
+	<body id="canv">
+		<div class="container">
+		<h1 id="hed1">Fortune Teller</h1>
+		<div class="main">
+		
+			<div class="form-row">
+				<form id="futureForm" >
+					<fieldset>
+						<legend>Fortune Teller</legend>
+						
+					<div class="form-row">
+					<label for="name"><strong>Enter your name:</strong></label>
+						<input type="text" name="name" id="name" value="">
+					</div>
+					
+					<div class="form-row">
+						<label for="spouce"><strong>Enter another name:</strong></label>
+						<input type="text" name="spouce" id="spouce" value="">
+					</div>
+					
+					<div class="form-row">
+						<label for="num"><strong>Enter a number:</strong></label>
+						<input type="text" name="number" id="num" value="" >
+					</div>
+					
+					<div class="form-row">
+						<label for="loc"><strong>Enter a location:</strong></label>
+						<input type="text" name="city" id="loc" value="">
+					</div>
+					<div class="form-row">
+						<label for="career"><strong>Enter a job:</strong></label>
+						<input type="text" name="career" id="career" value="">
+					</div>
+
+					</fieldset>
+
+				</form>
+			</div>
+		</div>
+		<div class="bottom">
+		<p id="demo"></p>
+		<button type="button" value="Get my fortune" onclick="future()">Click Me</button>
+
+		</div>
+		</div>
+	<script>
+
+
+    function future(){
+      var fName=document.forms["futureForm"]["name"].value;
+      var sName=document.forms["futureForm"]["spouce"].value;
+      var kNum=document.forms["futureForm"]["num"].value;
+      var city=document.forms["futureForm"]["loc"].value;
+      var job=document.forms["futureForm"]["career"].value;
+      var name=career.value;
+	  //=======================
+	  document.getElementById("canv").style.backgroundColor="yellow";
+		document.getElementById("hed1").style.color="purple";
+		document.getElementById("hed1").style.fontFamily="Comic Sans MS";
+		document.getElementById("demo").style.color="red";
+		document.getElementById("demo").style.fontSize="1.2rem";
+	  
+	  //=================
+      document.getElementById("demo").innerHTML= "Hello " + fName + " you will marry "+sName+" have " +kNum +
+       " kids,  live in  " +city +" and will be a " + job;
+    }
+
+  </script>
+</body>
+
+</html>

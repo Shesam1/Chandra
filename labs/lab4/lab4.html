@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 4</title>
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="A4_ChandradatGir.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="A4_ChandradatGir.js"></script>
+
+
+</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>GoTo Credit Card Validation</h1>
+				<h3>Please enter your 16 digit number!</h3>
+			</header>
+			<div class="form-row">
+				<form id="credit">
+				<fieldset>
+					<legend>Card Validation</legend>
+					<div class="form-row">
+						<label for="credit-1">Enter Credit Card Number:</label>
+						<input type="text" id="credit-1" name="creditcard" placeholder="9999-9999-9999-9999"><br>
+					</div>
+					<div class="form-row">
+						<label for="expMth">Expiration Date<br>"MM-</label><label for="expYr">-YY"</label><br>
+
+								<select name="month" id="expMth">
+									<option value=""></option>
+									<option value="00">01</option>
+									<option value="01">02</option>
+									<option value="02">03</option>
+									<option value="03">04</option>
+									<option value="04">05</option>
+									<option value="05">06</option>
+									<option value="06">07</option>
+									<option value="07">08</option>
+									<option value="08">09</option>
+									<option value="09">10</option>
+									<option value="10">11</option>
+									<option value="11">12</option>
+								</select>
+								<select name="expYear" id="expYr">
+									<option value=""></option>
+									<option value="2015">15</option>
+									<option value="2016">16</option>
+									<option value="2017">17</option>
+									<option value="2018">18</option>
+									<option value="2019">19</option>
+									<option value="2020">20</option>
+									<option value="2021">21</option>
+									<option value="2022">22</option>
+									<option value="2023">23</option>
+									<option value="2024">24</option>
+									<option value="2025">25</option>
+									<option value="2026">26</option>
+								</select>
+							</div>
+					</fieldset>
+					</form>
+				</div>
+				<p id="demo"></p>
+				<p id="demo2"></p>
+
+				<button type="button" id="btn_1">Click Me</button>
+		</div>
+	</body>
+</html>

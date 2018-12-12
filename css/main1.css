@@ -1,0 +1,101 @@
+
+
+
+			body{
+				background-color:rgb(244, 110, 66);
+				border:2px green solid;
+				border-radius:5px;
+				padding:20px;
+				width:auto;
+			}
+				
+
+			fieldset{
+				background-color:rgb(244, 110, 66);
+				color:purple;
+				border:2px green solid;
+				border-radius:5px;
+				padding:20px;
+				width:auto;
+
+			}
+
+			h1{
+				color:#034f84;
+				font-family: 'Tangerine', cursive;
+				font-size: 3em;
+			}
+
+			p{
+				font-family:sans_serif;
+			}
+
+			button:hover{
+				opacity:1;
+				background-color:yellow;
+				color:red;
+			}
+
+			#button-1{
+				background-color:green;
+				color:yellow;
+				border:none;
+				padding: 16px 32px;
+				opacity:0.6;
+				transition:0.3s;
+
+			}
+			#button-1:hover{
+				opacity:1;
+				color:red;
+			}
+
+			.data-1{
+				font-family:sans_serif;
+				font-weight:bold;
+			}
+
+			.data-2{
+				text-align:right;
+			}
+			#yourname:hover, .p1:hover, .data-1:hover, .data-2:hover{
+				background-color:orange;
+				color:blue;
+			}
+
+			input:first-child{
+				color:purple;
+			}
+
+			th:first-child{
+				text-align:left;
+				background-color:rgb(244, 110, 66);
+				color:purple;
+			}
+			th{
+				text-align:right;
+			}
+
+			td{
+				text-align:right;
+				font-size:1.0em;
+				width:50px;
+			}
+			input, td{
+				background-color:yellow;
+				color:green;
+				margin:0px;
+			}
+
+
+			.p1{
+				margin:0px;
+				border-top: 2px gray solid;
+				border-left: 2px gray solid;
+				border-bottom: 2px white solid;
+				border-right: 2px white solid;
+				height:17px;
+			}
+			p.small{
+				font-size:small;
+			}
